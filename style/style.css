@@ -10,7 +10,8 @@
     --progress-color:#c1c1c1;
     
     /* * LAYOUT */
-    
+    --player-height: 120px;
+    --sidebar-width: 300px;
 }
 
 /* ! reset */
@@ -22,7 +23,8 @@
 
 /* ! generics */
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 
 ul{
@@ -43,3 +45,34 @@ img{
     display: flex;
 }
 
+/* ! APP TOP */
+
+/* ? sidebar */
+#app-sidebar{
+    height: calc(100vh - var(--player-height));
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg);
+}
+
+/* ? app content */
+#app-content{
+    height: calc(100vh - var(--player-height));
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: var(--content-container-bg);
+}
+
+/* ! PLAYER */
+#app-player{
+    height: var(--player-height);
+    background-color: var(--player-bg);
+}
+
+
+/* MEDIA XS */
+@media screen and (max-width: 576px) {
+    :root{
+        --sidebar-width: 80px;
+        --player-height: 80px;
+    }
+}
