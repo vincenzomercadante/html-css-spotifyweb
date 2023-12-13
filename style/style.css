@@ -8,6 +8,7 @@
     --secondary-txt-color: #747474;
     --progress-bar-color: #5a5a5a;
     --progress-color:#c1c1c1;
+    --playlist-btn-bg:#a3a3a3;
     
     /* * LAYOUT */
     --player-height: 120px;
@@ -44,14 +45,71 @@ img{
 .d-flex{
     display: flex;
 }
-
 /* ! APP TOP */
 
 /* ? sidebar */
 #app-sidebar{
     height: calc(100vh - var(--player-height));
     width: var(--sidebar-width);
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    font-weight: bold;
     background-color: var(--sidebar-bg);
+    color: var(--secondary-txt-color);
+}
+
+/* sidebar navbar */
+#sidebar-navbar .logo{
+    margin-top: 1rem;
+    width: 180px;
+}
+
+#sidebar-navbar .nav-list{
+    width: calc(100%);
+    margin-top: 2rem;
+}
+
+#sidebar-navbar .list-item{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#sidebar-navbar .list-item a{
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    
+}
+
+#sidebar-navbar .list-item a svg{
+    height: 30px;
+}
+
+/* playlist section */
+#playlist{
+    margin-top: 2rem;
+}
+
+#playlist .section-title{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+#playlist .nav-list{
+    margin-top: 1rem;
+}
+
+#playlist .btn{
+    height: 50px;
+    width: 50px;
+    font-size: 3rem;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: var(--playlist-btn-bg);
+    color: #000000;
 }
 
 /* ? app content */
