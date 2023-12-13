@@ -13,6 +13,8 @@
     /* * LAYOUT */
     --player-height: 120px;
     --sidebar-width: 300px;
+    --img-rounded-small: 30px;
+    --img-rounded: 150px;
 }
 
 /* ! reset */
@@ -45,6 +47,17 @@ img{
 .d-flex{
     display: flex;
 }
+
+.img-rounded{
+    overflow: hidden;
+    border-radius: 50%;
+    height: var(--img-rounded);
+    aspect-ratio: 1;
+    line-height: var(--img-rounded);
+    object-fit: cover;
+    background-color: var(--playlist-btn-bg);
+}
+
 /* ! APP TOP */
 
 /* ? sidebar */
@@ -53,6 +66,7 @@ img{
     width: var(--sidebar-width);
     padding: 1rem 2rem;
     justify-content: space-between;
+    flex-direction: column;
     font-weight: bold;
     background-color: var(--sidebar-bg);
     color: var(--secondary-txt-color);
@@ -70,7 +84,6 @@ img{
 }
 
 #sidebar-navbar .list-item{
-    font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
@@ -89,6 +102,7 @@ img{
 /* playlist section */
 #playlist{
     margin-top: 2rem;
+    overflow: auto;
 }
 
 #playlist .section-title{
@@ -112,6 +126,30 @@ img{
     color: #000000;
 }
 
+/* sezione profile */
+#sidebar-profile .download{
+    padding-bottom: 0.5rem;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--secondary-txt-color);
+}
+
+#sidebar-profile .download svg {
+    height: 1rem;
+}
+
+#sidebar-profile .profile{
+    margin-top: 1rem;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-txt-color);
+}
+
+.profile .img-rounded{
+    height: var(--img-rounded-small);
+    line-height: 0;
+}
+
 /* ? app content */
 #app-content{
     height: calc(100vh - var(--player-height));
@@ -132,5 +170,14 @@ img{
     :root{
         --sidebar-width: 80px;
         --player-height: 80px;
+    }
+
+    /* sidebar */
+    #app-sidebar span{
+        display: none;
+    }
+
+    #app-sidebar #playlist{
+        display: none;
     }
 }
