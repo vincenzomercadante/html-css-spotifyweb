@@ -290,8 +290,45 @@ img{
 /* ! PLAYER */
 #app-player{
     height: var(--player-height);
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--player-bg);
 }
+
+.footer-left{
+    align-items: center;
+    gap: 50px;
+    color: var(--secondary-txt-color);
+    font-weight: bold;
+}
+
+.footer-left .card{
+    align-content: center;
+    gap: 10px;
+}
+
+.footer-left .card .song-info{
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-left .song-info .card-name{
+    color: white;
+}
+
+.footer-left img{
+    width: 60px;
+}
+
+.footer-left .icon{
+    font-size: 1.3rem;
+}
+
+.footer-left .icon > .fa-folder{
+    margin-left: 10px;
+}
+
 
 
 /* MEDIA MD */
