@@ -202,11 +202,16 @@ img{
 
 }
 
-/* app main */
-#app-main{
-    padding: 0 2rem;
+#app-content{
+    overflow: scroll;
 }
 
+/* app main */
+#app-main{
+    padding: 2rem;
+}
+
+/* main navbar */
 #app-main .main-navbar{
     margin-top: 2rem;
     justify-content: center;
@@ -237,6 +242,50 @@ img{
     background-color: var(--before-nav-color);
 }
 
+/* main-content */
+#app-main section{
+    margin-top: 3rem;
+}
+
+#app-main .section-title{
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+#app-main .card-container{
+    padding-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#app-main .card{
+    width: calc(100% / 6 - 1rem);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+
+#app-main .card .card-name{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#app-main .subtitle{
+    color: var(--secondary-txt-color);
+    font-size: 1rem;
+}
+
+#for-you .section-title{
+    margin-bottom: 0.5rem;
+}
+
+#for-you .img-rounded{
+    height: 100%;
+}
 
 /* ! PLAYER */
 #app-player{
@@ -244,6 +293,19 @@ img{
     background-color: var(--player-bg);
 }
 
+
+/* MEDIA MD */
+@media screen and (max-width: 992px){
+    #app-main .card{
+        width: calc(100% / 4 - 1rem);
+    }
+}
+
+@media screen and (max-width: 768px){
+    #app-main .card{
+        width: calc(100% / 2 - 1rem);
+    }
+}
 
 /* MEDIA XS */
 @media screen and (max-width: 576px) {
