@@ -42,7 +42,7 @@ a{
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
 }
 
 .d-flex{
@@ -66,7 +66,6 @@ img{
     height: calc(100vh - var(--player-height));
     width: var(--sidebar-width);
     padding: 1rem 2rem;
-    justify-content: space-between;
     flex-direction: column;
     flex-shrink: 0;
     font-weight: bold;
@@ -92,10 +91,6 @@ img{
     align-items: center; 
 }
 
-.sidebar-top,
-#sidebar-profile{
-    width: 100%;
-}
 
 #sidebar-navbar .logo{ 
     width: 70%;
@@ -131,7 +126,6 @@ img{
 /* playlist section */
 #playlist{
     margin-top: 2rem;
-    overflow: auto;
 }
 
 #playlist .section-title{
@@ -156,6 +150,10 @@ img{
 }
 
 /* sezione profile */
+#sidebar-profile{
+    margin-top: auto;
+}
+
 #sidebar-profile .download{
     padding-bottom: 0.5rem;
     align-items: center;
@@ -293,30 +291,20 @@ img{
     height: var(--player-height);
     padding: 1rem;
     background-color: var(--player-bg);
-    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
     color: white;
-}
-
-.footer-left,
-.player-right{
-    flex-grow: 1;
-}
-
-.player-mid{
-    flex-grow: 4;
+    font-weight: bold;
 }
 
 .footer-left{
     align-items: center;
-    gap: 50px;
     color: var(--secondary-txt-color);
-    font-weight: bold;
-    flex-shrink: 2;
+    gap: 10px;
 }
 
 .footer-left .card{
     align-content: center;
-    gap: 10px;
 }
 
 .footer-left .card .song-info{
@@ -326,105 +314,82 @@ img{
 
 .footer-left .song-info .card-name{
     color: white;
+    font-size: 1rem;
 }
 
-.footer-left img{
+.footer-left .song-img{
     width: 60px;
+    aspect-ratio: 1;
+    margin-right: 10px;
 }
 
-.footer-left .icon{
-    font-size: 1.3rem;
-}
-
-.footer-left .icon > .fa-folder{
+.footer-left .icon > *{
     margin-left: 10px;
 }
 
 #app-player .player-mid{
+    width: 500px;
+    min-width: 100px;
+    color: var(--primary-txt-color);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    color: var(--primary-txt-color);
+    flex-shrink: 2;
 }
 
 .player-mid .player-comand{
-    gap: 2rem;
+    margin-bottom: 1rem;
+    gap: 30px;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-}
-
-.player-mid .player-comand .img-rounded{
-    height: 30px;
-    line-height: 28px;
-    font-size: 1.2rem;
-    text-align: center;
-    background-color: inherit;
-    border: 1px solid currentColor;
 }
 
 #app-player .player-bar{
-    gap: 20px;
     justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
-.player-mid .bar{
-    width: 40%;
-    align-items: center;
-}
-
-#app-player .bar>*{
+#app-player .bar{
     height: 4px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.bar .bar-progress{
-    background-color: var(--primary-txt-color);
-}
-
-.bar .bar-remain{
+    border-radius: 4px;
     background-color: var(--secondary-txt-color);
 }
 
-.player-mid .bar .bar-progress{
-    width: 30%;    
-}  
+#app-player .player-mid .bar{
+    width: calc(100% - 100px);
+}
 
-.player-mid .bar .bar-remain{
-    width: 70%;
+.bar .bar-progress{
+    height: 4px;
+    background-color: var(--primary-txt-color);
+}
+
+.player-mid .player-bar .bar-progress{
+    width: 30%;
 }
 
 .player-mid .player-bar .time{
-    font-weight: bold;
+    width: 50px;
+    text-align: center;
+    font-size: 0.7rem;
 }
 
 #app-player .player-right{
-    justify-content: flex-end;
-    gap: 1rem;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
     flex-shrink: 0;
 }
 
-.player-right .bar{
-    width: 50%;
+#app-player .player-right .bar{
+    width: 100px;
     align-items: center;
 }
 
 .player-right .bar .bar-progress{
     width: 20%;
-}
-
-.player-right .bar .bar-remain{
-    width: 80%;
-}
-
-@media screen and (max-width: 1170px){
-    .footer-left .icon > .fa-folder{
-        margin-left: 0;
-    }
 }
 
 /* MEDIA MD */
@@ -433,6 +398,9 @@ img{
         width: calc(100% / 4 - 1rem);
     }
 
+    #app-player .player-right .bar{
+        width: 100%;
+    }
 }
 
 /* MEDIA S */
@@ -486,11 +454,9 @@ img{
         border-bottom: none;
     }
 
-    #app-player .player-left{
-        gap: 10px;
-    }
-    
-    #app-player .player-right{
+    .player-mid .player-comand{
         gap: 1rem;
+        font-size: 1rem;
     }
+
 }
