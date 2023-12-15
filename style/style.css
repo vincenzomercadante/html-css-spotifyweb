@@ -6,7 +6,6 @@
     --content-container-bg: #141922;
     --primary-txt-color: white;
     --secondary-txt-color: #898b8e;
-    --progress-bar-color: #5a5a5a;
     --progress-color:#c1c1c1;
     --playlist-btn-bg:#a3a3a3;
     --before-nav-color: #7bb521;
@@ -54,11 +53,12 @@ img{
 .img-rounded{
     overflow: hidden;
     border-radius: 50%;
-    height: var(--img-rounded);
     aspect-ratio: 1;
-    line-height: var(--img-rounded);
-    object-fit: cover;
     background-color: var(--playlist-btn-bg);
+}
+
+.img-rounded img{
+    object-fit: cover;
 }
 
 a:hover{
@@ -67,7 +67,7 @@ a:hover{
 
 /* ! APP TOP */
 
-/* ? sidebar */
+/* ! sidebar */
 #app-sidebar{
     height: calc(100vh - var(--player-height));
     width: var(--sidebar-width);
@@ -77,11 +77,11 @@ a:hover{
     font-weight: bold;
     background-color: var(--sidebar-bg);
     color: var(--secondary-txt-color);
-    overflow: scroll;
+    overflow: auto;
     
 }
 
-/* sidebar navbar */
+/* ? sidebar navbar */
 #app-sidebar .nav-list{
     width: 100%;
     margin-top: 2rem;
@@ -129,7 +129,7 @@ a:hover{
     border: 3px solid var(--before-nav-color);
 }
 
-/* playlist section */
+/* ? playlist section */
 #playlist{
     margin-top: 2rem;
 }
@@ -159,7 +159,7 @@ a:hover{
     background-color: var(--primary-txt-color);
 }
 
-/* sezione profile */
+/* ? sezione profile */
 #sidebar-profile{
     margin-top: auto;
 }
@@ -187,14 +187,14 @@ a:hover{
     line-height: 0;
 }
 
-/* ? app content */
+/* ! app content */
 #app-content{
     height: calc(100vh - var(--player-height));
     flex-grow: 1;
     background-color: var(--content-container-bg);
 }
 
-/* upgrade */
+/* ? upgrade */
 .upgrade{
     padding-right: 1rem;
     height: var(--upgrade-height);
@@ -216,15 +216,15 @@ a:hover{
 }
 
 #app-content{
-    overflow: scroll;
+    overflow: auto;
 }
 
-/* app main */
+/* ! app main */
 #app-main{
     padding: 2rem;
 }
 
-/* main navbar */
+/* ? main navbar */
 #app-main .main-navbar{
     margin-top: 2rem;
     justify-content: center;
@@ -255,7 +255,7 @@ a:hover{
     background-color: var(--before-nav-color);
 }
 
-/* main-content */
+/* ? main-content */
 #app-main section{
     margin-top: 3rem;
 }
@@ -268,6 +268,7 @@ a:hover{
     margin-bottom: 0.5rem;
 }
 
+/* ? card */
 #app-main .card-container{
     padding-top: 1rem;
     flex-wrap: wrap;
@@ -326,9 +327,10 @@ a:hover{
 }
 
 #artists .img-rounded{
-    height: 100%;
+    width: 100%;
     position: relative;
 }
+
 
 #artists .layover{
     border-radius: 50%;
@@ -337,6 +339,7 @@ a:hover{
 #artists .img-rounded:hover .layover{
     display: block;
 }
+
 
 /* ! PLAYER */
 #app-player{
@@ -350,7 +353,7 @@ a:hover{
     font-weight: bold;
 }
 
-/* player left */
+/* ? player left */
 .player-left{
     align-items: center;
     color: var(--secondary-txt-color);
@@ -385,7 +388,7 @@ a:hover{
     color: var(--primary-txt-color);
 }
 
-/* player mid section */
+/* ? player mid section */
 #app-player i{
     cursor: pointer;
 }
@@ -400,6 +403,7 @@ a:hover{
     flex-shrink: 2;
 }
 
+/* ? area comandi */
 .player-mid .player-comand{
     margin-bottom: 1rem;
     gap: 30px;
@@ -413,6 +417,7 @@ a:hover{
     cursor: pointer;
 }
 
+/* ? progressive bar */
 #app-player .player-bar{
     justify-content: center;
     align-items: center;
@@ -467,7 +472,7 @@ a:hover{
     font-size: 0.7rem;
 }
 
-/* player right */
+/* ? player area volume */
 #app-player .player-right{
     align-items: center;
     flex-wrap: wrap;
@@ -484,7 +489,7 @@ a:hover{
     width: 30%;
 }
 
-/* MEDIA MD */
+/* ! MEDIA MD */
 @media screen and (max-width: 992px){
     #app-main .card{
         width: calc(100% / 4 - 1rem);
@@ -495,21 +500,21 @@ a:hover{
     }
 }
 
-/* MEDIA S */
+/* ! MEDIA S */
 @media screen and (max-width: 768px){
     #app-main .card{
         width: calc(100% / 2 - 1rem);
     }
 }
 
-/* MEDIA XS */
+/* ! MEDIA XS */
 @media screen and (max-width: 576px) {
     :root{
         --sidebar-width: 80px;
         --player-height: 80px;
     }
 
-    /* sidebar */
+    /* ? sidebar */
     #app-sidebar{
         padding: 1rem;
         align-items: center;
@@ -533,7 +538,6 @@ a:hover{
     #sidebar-navbar{
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     #app-sidebar .list-item a,
