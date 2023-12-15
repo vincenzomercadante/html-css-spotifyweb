@@ -106,7 +106,7 @@
             <!-- contenuto main della pagina -->
             <div id="app-content">
                 <section class="upgrade">
-                    <a href="#" class="btn">Effettua l'upgrade</a>
+                    <button class="btn">Effettua l'upgrade</button>
                 </section>
                 <main id="app-main">
                     <nav class="main-navbar d-flex">
@@ -139,37 +139,61 @@
                         <div class="card-container d-flex">
                             <!-- card -->
                             <div class="card d-flex">
-                                <img src="./img/metal_lifting.jpg" alt="playlist photo" class="card-image">
+                                <div class="card-image">
+                                    <div class="layover"></div>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <img src="./img/metal_lifting.jpg" alt="playlist photo">
+                                </div>
                                 <span class="card-name">Heavy Metal</span>
                                 <span class="subtitle">Subtitle</span>
                             </div>
                             <!-- card -->
                             <div class="card d-flex">
-                                <img src="./img/stranger.jpeg" alt="playlist photo" class="card-image">
+                                <div class="card-image">
+                                    <div class="layover"></div>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <img src="./img/stranger.jpeg" alt="playlist photo" >
+                                </div>
                                 <span class="card-name">Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</span>
                                 <span class="subtitle">Kyle Dixon & Michael Stein</span>
                             </div>
                             <!-- card -->
                             <div class="card d-flex">
-                                <img src="./img/aquietplace.jpeg" alt="playlist photo" class="card-image">
+                                <div class="card-image">
+                                    <div class="layover"></div>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <img src="./img/aquietplace.jpeg" alt="playlist photo" >
+                                </div>
                                 <span class="card-name">A queit place</span>
                                 <span class="subtitle">Subtitle</span>
                             </div>
                             <!-- card -->
                             <div class="card d-flex">
-                                <img src="./img/split.jpeg" alt="playlist photo" class="card-image">
+                                <div class="card-image">
+                                    <div class="layover"></div>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <img src="./img/split.jpeg" alt="playlist photo" >
+                                </div>
                                 <span class="card-name">Split</span>
                                 <span class="subtitle">Subtitle</span>
                             </div>
                             <!-- card -->
                             <div class="card d-flex">
-                                <img src="./img/cure.jpeg" alt="playlist photo" class="card-image">
+                                <div class="card-image">
+                                    <div class="layover"></div>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <img src="./img/cure.jpeg" alt="playlist photo" >
+                                </div>
                                 <span class="card-name">A cure for wellness</span>
                                 <span class="subtitle">Subtitle</span>
                             </div>
                             <!-- card -->
                             <div class="card d-flex">
-                                <img src="./img/sinister.jpeg" alt="playlist photo" class="card-image">
+                                <div class="card-image">
+                                    <div class="layover"></div>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <img src="./img/sinister.jpeg" alt="playlist photo">
+                                </div>
                                 <span class="card-name">Sinister</span>
                                 <span class="subtitle">Subtitle</span>
                             </div>
@@ -184,18 +208,24 @@
                         <div class="card-container d-flex">
                             <!-- card -->
                             <div class="card d-flex">
-                                <img src="./img/radar.jpeg" alt="playlist photo" class="card-image">
+                                <div class="card-image">
+                                    <div class="layover"></div>
+                                    <img src="./img/radar.jpeg" alt="playlist photo">
+                                </div>
                                 <span class="card-name">Release Radar</span>
                             </div>
                             <!-- card -->
                             <div class="card d-flex">
-                                <img src="./img/mixdaily.jpeg" alt="playlist photo" class="card-image">
+                                <div class="card-image">
+                                    <div class="layover"></div>
+                                    <img src="./img/mixdaily.jpeg" alt="playlist photo">
+                                </div>
                                 <span class="card-name">Daily Mix 1</span>
                             </div>
                         </div>
                     </section>
                     <!-- artisti più popolari -->
-                    <section id="for-you">
+                    <section id="artists">
                         <!-- titolo sezione -->
                         <span class="section-title">Artisti più popolari</span>
                         <!-- sottotitolo -->
@@ -204,14 +234,16 @@
                             <!-- card -->
                             <div class="card d-flex">
                                 <div class="img-rounded">
-                                    <img src="./img/youg.jpeg" alt="playlist photo" class="card-image">
+                                    <div class="layover"></div>
+                                    <img src="./img/youg.jpeg" alt="playlist photo">
                                 </div>
                                 <span class="card-name">Lana del Rey</span>
                             </div>
                             <!-- card -->
                             <div class="card d-flex">
                                 <div class="img-rounded">
-                                    <img src="./img/einaudi.jpeg" alt="playlist photo" class="card-image">
+                                    <div class="layover"></div>
+                                    <img src="./img/einaudi.jpeg" alt="playlist photo">
                                 </div>  
                                 <span class="card-name">Ludovico Einaudi</span>
                             </div>
@@ -222,12 +254,12 @@
         </div>
         <!-- player -->
         <footer id="app-player" class="d-flex">
-            <div class="footer-left d-flex">
+            <div class="player-left d-flex">
                 <div class="card d-flex">
                         <img src="./img/sinister.jpeg" alt="song played" class="song-img">
                     <div class="song-info d-flex">
-                        <div class="card-name">Sinister</div>
-                        <div class="subtitle">Brano Nome</div>
+                        <a href="#" class="card-name">Sinister</a>
+                        <a href="#" class="subtitle">Brano Nome</a>
                     </div>
                 </div>
                 <div class="icon">
